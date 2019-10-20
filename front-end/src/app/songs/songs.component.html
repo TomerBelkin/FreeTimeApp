@@ -1,1 +1,9 @@
-<p>songs works!</p>
+
+<div *ngFor="let song of songs" class="song-frame media">
+    <img class="song-img mr-3" src="../../assets/song.png"  alt="Generic placeholder image">
+    <div class="media-body">
+        <h5 class="mt-0 mb-1">{{song.artist}} - {{song.title}}</h5>
+        
+    </div>
+</div>
+

@@ -1,0 +1,14 @@
+
+.song-img {
+    width: 64px;
+    height: 64px;
+    border-radius: 10%;
+}
+
+.song-frame{
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: .2rem;
+    border-color: silver;
+}
