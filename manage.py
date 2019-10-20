@@ -2,7 +2,7 @@ import unittest
 from app import blueprint
 from flask_migrate import Migrate, MigrateCommand
 from flask_script import Manager
-
+from flask_cors import CORS
 from app.main import create_app, db
 
 app = create_app('dev')
@@ -18,6 +18,11 @@ manager.add_command('db', MigrateCommand)
 @manager.command
 def run():
     app.run()
+
+@app.after_request
+def after_request(response):
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 @manager.command
 def test():

@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
-import { } from '@angular/http'
+import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class SongService {
-  private url
+  private url = "http://localhost:5000/song/"
 
-  constructor() { 
+  constructor(private http: HttpClient) { 
 
   }
 
   getSongs(){
-
+    return this.http.get(this.url);
   }
 }
