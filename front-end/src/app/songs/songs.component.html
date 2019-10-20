@@ -3,7 +3,8 @@
     <img class="song-img mr-3" src="../../assets/song.png"  alt="Generic placeholder image">
     <div class="media-body">
         <h5 class="mt-0 mb-1">{{song.artist}} - {{song.title}}</h5>
-        
+        <div ng-if="song.rate === 0.0; else rated"> unrated yet</div>
+        <ng-template #rated>{{song.rate}}</ng-template>
     </div>
 </div>
 
