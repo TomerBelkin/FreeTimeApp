@@ -6,11 +6,15 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NotFondComponent } from './not-fond/not-fond.component';
+import { SongDetailComponent } from './song-detail/song-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SongsComponent
+    SongsComponent,
+    NotFondComponent,
+    SongDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -6,9 +6,41 @@
 }
 
 .song-frame{
-    padding: 1.5rem;
-    margin-right: 0;
-    margin-left: 0;
-    border-width: .2rem;
-    border-color: silver;
+    padding: 20px;
+    color: #eee;
+    max-height: 120px;
+    min-width: 120px;
+    background-color: #3f525c;
+    border-radius: 2px;
 }
+
+.grid {
+    margin: 0;
+}
+.col-1-4 {
+    width: 70%;
+}
+.song-frame:hover {
+    background-color: #eee;
+    cursor: pointer;
+    color: #607d8b;
+}
+.grid-pad {
+    padding: 10px 0;
+  }
+.grid-pad > [class*='col-']:last-of-type {
+    padding-right: 20px;
+}
+@media (max-width: 600px) {
+    .song-frame {
+      font-size: 10px;
+      max-height: 75px; }
+}
+@media (max-width: 1024px) {
+    .grid {
+      margin: 0;
+    }
+    .song-frame {
+      min-width: 60px;
+    }
+  }
