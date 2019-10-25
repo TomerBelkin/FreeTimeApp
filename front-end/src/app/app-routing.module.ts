@@ -7,7 +7,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: '/songs', pathMatch: 'full' },
-  { path: 'detail/:id', component: SongDetailComponent },
+  { path: 'detail/:song_id', component: SongDetailComponent },
   { path: 'songs', component: SongsComponent }
 ];
 
