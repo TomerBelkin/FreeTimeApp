@@ -1,7 +1,7 @@
-import { map } from 'rxjs/operators';
+import { Song } from './../models/song';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 
 
@@ -10,13 +10,17 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SongService {
-  private url = "http://localhost:5000/song/"
+  private url = "http://localhost:5000/song"
 
   constructor(private http: HttpClient) { 
 
   }
 
-  getSongs(){
-    return this.http.get(this.url);
+  getSongs(): Observable<Song[]>{
+    return this.http.get<Song[]>(this.url);
+  }
+
+  getSong(id: number): Observable<Song>{
+    return this.http.get<Song>(this.url + '/' + id);
   }
 }

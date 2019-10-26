@@ -1,3 +1,4 @@
+import { Song } from './../models/song';
 import { SongService } from './../services/song.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -9,11 +10,15 @@ import { Observable } from 'rxjs';
 })
 export class SongsComponent implements OnInit {
   
-  private songs;
+  songs: Song[];
 
   constructor(private service: SongService) { }
 
   ngOnInit() {
+    this.getSongs();
+  }
+
+  getSongs(){
     this.service.getSongs().subscribe((data: any) => {
       this.songs = data.data;
     });

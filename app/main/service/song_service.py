@@ -49,8 +49,7 @@ def delete_song(id):
     db.session.delete(get_a_song(id))
 
 def get_a_song(id):
-    return Song.query.filter_by(id=id)
-
+    return Song.query.get(id)
 
 def song_exist(data):
     return True

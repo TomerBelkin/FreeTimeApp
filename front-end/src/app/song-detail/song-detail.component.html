@@ -1,10 +1,11 @@
-<div>
-    <h2>Song 1 Details</h2>
-    <div><span>id: </span>Song.id</div>
-    <div>
-        <label>name:
-        <input placeholder="name"/>
-        </label>
-    </div>
+<div *ngIf="song">
+    <h2>Song Details</h2>
+    <div><span>id: </span>{{song.id}}</div>
+    <div><span>title: </span>{{song.title}}</div>
+    <div><span>artist: </span>{{song.artist}}</div>
+    <div><span>album: </span>{{song.album}}</div>
+    <div><span>year: </span>{{song.year}}</div>
+    <div><span>rate: </span>{{song.rate}}</div>
+    <div><span>length: </span>{{song.length}}</div>
     <button >go back</button>
 </div>

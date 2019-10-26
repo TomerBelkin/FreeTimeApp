@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Song } from './../models/song';
+import { SongService } from './../services/song.service';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 
@@ -8,14 +10,19 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./song-detail.component.css']
 })
 export class SongDetailComponent implements OnInit {
+  @Input() song: Song
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(  private route: ActivatedRoute,
+                private service: SongService) { }
 
-  ngOnInit() {
-    this.route.paramMap
-    .subscribe(params => {
-      let id = +params.get("song_id")
-    })
+  ngOnInit(): void {
+    this.getSong();
+  }
+  
+  getSong(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.service.getSong(id)
+      .subscribe(song => this.song = song);
   }
 
 }
