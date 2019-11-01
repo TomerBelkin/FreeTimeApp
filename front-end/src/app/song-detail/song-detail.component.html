@@ -1,11 +1,13 @@
-<div *ngIf="song">
-    <h2>Song Details</h2>
-    <div><span>id: </span>{{song.id}}</div>
-    <div><span>title: </span>{{song.title}}</div>
-    <div><span>artist: </span>{{song.artist}}</div>
-    <div><span>album: </span>{{song.album}}</div>
-    <div><span>year: </span>{{song.year}}</div>
-    <div><span>rate: </span>{{song.rate}}</div>
-    <div><span>length: </span>{{song.length}}</div>
-    <button >go back</button>
-</div>
+<div class="card" *ngIf="song">
+    <img src="../../assets/song.png" alt="Avatar" style="width:100%">
+    <div class="container">
+      <h4><b>{{song.title}}</b></h4>
+      <p>id: {{song.id}}</p>
+      <p>artist: {{song.artist}}</p>
+      <p>album: {{song.album}}</p>
+      <p>year: {{song.year}}</p>
+      <p>rate: {{song.rate}}</p>
+      <p>length: {{song.length}}</p>
+      <button >go back</button>
+    </div>
+  </div>
