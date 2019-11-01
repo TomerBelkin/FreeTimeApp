@@ -1,0 +1,18 @@
+<div id="mySidenav" class="sidenav"
+    [ngStyle]="{
+        'width': isSideNavIsOpen ? '250px' : '0px'}">
+    <a href="#">Music</a>
+    <a href="#">Watch</a>
+    <a href="#">Finnance</a>
+    <a href="#">Books</a>
+  </div>
+  
+  <!-- Use any element to open the sidenav -->
+<span (click)="openSideNav()">open aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span>
+<br>
+<span (click)="closeSideNav()">close aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span>
+  
+  <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page
+  <div id="main">
+    ...
+  </div> -->

@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NotFondComponent } from './not-fond/not-fond.component';
 import { SongDetailComponent } from './song-detail/song-detail.component';
+import { SideNavbarComponent } from './side-navbar/side-navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SongsComponent,
     NotFondComponent,
-    SongDetailComponent
+    SongDetailComponent,
+    SideNavbarComponent
   ],
   imports: [
     BrowserModule,
