@@ -6,7 +6,7 @@
       <p>artist: {{song.artist}}</p>
       <p>album: {{song.album}}</p>
       <p>year: {{song.year}}</p>
-      <p>rate: {{song.rate}}</p>
+      <p ng-if="song.rate === 0.0; else rated"> unrated yet</p>
       <p>length: {{song.length}}</p>
       <button >go back</button>
     </div>

@@ -10,7 +10,7 @@
     color: #eee;
     max-height: 120px;
     min-width: 120px;
-    background-color: #3f525c;
+    background-color: #3d464b;
     border-radius: 2px;
 }
 
@@ -18,16 +18,17 @@
     margin: 0;
 }
 .col-1-4 {
-    width: 70%;
+    width: 100%;
 }
 .song-frame:hover {
     background-color: #eee;
     cursor: pointer;
     color: #607d8b;
 }
-.grid-pad {
-    padding: 10px 0;
-  }
+
+h5 {
+    text-align:center
+}
 .grid-pad > [class*='col-']:last-of-type {
     padding-right: 20px;
 }

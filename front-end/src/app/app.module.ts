@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NotFondComponent } from './not-fond/not-fond.component';
 import { SongDetailComponent } from './song-detail/song-detail.component';
 import { SideNavbarComponent } from './side-navbar/side-navbar.component';
+import { DownloadSongComponent } from './download-song/download-song.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SideNavbarComponent } from './side-navbar/side-navbar.component';
     SongsComponent,
     NotFondComponent,
     SongDetailComponent,
-    SideNavbarComponent
+    SideNavbarComponent,
+    DownloadSongComponent
   ],
   imports: [
     BrowserModule,
