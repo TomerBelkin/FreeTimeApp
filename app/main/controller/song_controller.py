@@ -51,10 +51,14 @@ class Song(Resource):
 @api.response(404, 'Song not found.')
 class Song(Resource):
     def get(self):
+        print("get works")
+    def post(self):
         """get a song given its identifier"""
         try:
-            download_songs()
+            songs = request.data.decode('utf-8')
+            download_songs(songs)
             print("songs downloaded")
+            return ("start_download_songs")
         except Exception as e:
             print(e)
 

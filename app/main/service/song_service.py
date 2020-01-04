@@ -54,20 +54,20 @@ def get_a_song(id):
 def song_exist(data):
     return True
 
-def download_songs():
+def download_songs(songs):
     print("Downloads began at: " + datetime.datetime.now().strftime("%H:%M:%S"))
 
-    with open("D:\\Tomer\\Learn\\python\\app\\main\\Dal\\songs_for_download.txt") as download_songs_file:
-        content = download_songs_file.readlines()
-        content = [x.strip() for x in content]
-        for wanted_song in content:
-            try:
-                artist, song_name = wanted_song.split(' - ')
-                current_song = mp3_Handler.download_song(artist, song_name)
-                current_song["Year"] = 0
-                save_new_song(current_song)
-            except Exception as e:
-                print(e)
+    #with open("D:\\Tomer\\Learn\\python\\app\\main\\Dal\\songs_for_download.txt") as download_songs_file:
+    content = songs
+    content = content.split('\n')
+    for wanted_song in content:
+        try:
+            artist, song_name = wanted_song.split(' - ')
+            current_song = mp3_Handler.download_song(artist, song_name)
+            current_song["Year"] = 0
+            save_new_song(current_song)
+        except Exception as e:
+            print(e)
 
     print("Downloads ended at: " + datetime.datetime.now().strftime("%H:%M:%S"))
 

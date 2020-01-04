@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SongService } from '../services/song.service';
 
 @Component({
   selector: 'download-song',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DownloadSongComponent implements OnInit {
 
-  constructor() { }
+  song_names = []
+  constructor(private service: SongService) { }
 
   ngOnInit() {
+  }
+
+  downloadSongs(songs: String){
+    this.service.downloadSongs(songs)
   }
 
 }

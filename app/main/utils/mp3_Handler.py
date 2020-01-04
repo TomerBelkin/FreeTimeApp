@@ -14,7 +14,7 @@ import re
 
 mp3_end = '.mp3'
 dal_directory = "D:\\Tomer\\Learn\\python\\app\\main\\Dal\\"
-download_directory = "D:\\Tomer\\Learn\\python\\app\\main\\utils\\"
+download_directory = "D:\\Tomer\\Learn\\python\\FreeTimeApp\\"
 
 def is_good_mp3_file(full_file_name : str):
     """
