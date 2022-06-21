@@ -13,7 +13,7 @@ MarkupSafe==1.1.1
 mp3-tagger==1.0
 mutagen==1.42.0
 npTDMS==0.13.0
-numpy==1.16.1
+numpy==1.22.0
 pydocs==0.2
 python-magic==0.4.15
 requests==2.21.0
